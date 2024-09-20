@@ -1,5 +1,14 @@
 body {
   margin: 0px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+
+header {
+  grid-column: 2/3;
+  align-self: flex-end;
 }
 
 ol {
@@ -8,10 +17,98 @@ ol {
   list-style-type: none;
 }
 
+#ad-1 {
+  background-color: grey;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border: 8px;
+  margin: 2rem;
+}
+
+#ad-2 {
+  background-color: grey;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  border: 8px;
+  margin: 2rem;
+}
+
+.ad-text {}
+
+.text-large {
+  font-size: large;
+}
+
+.padding-medium {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.raised {
+  box-shadow: 1px 1px 8px 2px black;
+}
+
+.active\:raised:active {
+  box-shadow: 1px 1px 8px 2px black;
+}
+
+.sunken {
+  box-shadow: inset 1px 1px 2px 2px black;
+}
+
+.active\:sunken:active {
+  box-shadow: inset 1px 1px 2px 2px black;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-small {
+  gap: 1rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.brighten {
+  filter: brightness(1.3);
+}
+
+.hover\:brighten:hover {
+  filter: brightness(1.3);
+}
+
+.sp-buttons {
+  background-color: rgba(156, 156, 156, 0.044);
+  border-radius: 16px;
+}
+
+.border-none {
+  border: none;
+}
+
 .carusell {
   position: relative;
-  height: 100vh;
   overflow: hidden;
+  height: 740px;
+  width: 494px;
+
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .carusell>div {
@@ -28,11 +125,20 @@ ol {
 #next-button {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
+  height: 50px;
+  width: 50px;
+  align-self: center;
+  justify-self: end;
+  margin: 1rem;
 }
 
 #previus-button {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  height: 50px;
+  width: 50px;
+  align-self: center;
+  margin: 1rem;
 }
 
 #specific-buttons {
@@ -42,6 +148,9 @@ ol {
   justify-self: center;
 }
 
+.button-style {
+  background-color: rgba(72, 72, 72, 0.5);
+}
 
 .carusell>ol {
   position: absolute;
